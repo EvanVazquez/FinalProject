@@ -1,48 +1,3 @@
-        * {
-        font-family: Niramit, sans-serif;
-        color: #54608A;
-        box-sizing: border-box;}
-        
-        header h1 {
-        color: #F4C155; 
-        text-align:center
-        }
-
-        header h2 {
-            color: #54608A; 
-            text-align:center
-    
-        }
-
-        .w3-container .w3-green {
-            color: #54608A; 
-
-        }
-
-        a{
-            color: #F4C155;  
-        }
-    
-        p { 
-            text-align:center;
-            color: #54608A
-        }
-
-        h3 { 
-            text-align:center;
-            color: #54608A
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align:center;
-            color: #54608A
-
-        }
-
 
         article h4 {
         text-align: center;}
@@ -67,19 +22,6 @@
             background-color:antiquewhite;
         }
 
-        h1 { 
-            text-align:center;
-        }
-
-        .container {
-            text-align:center;
-
-        }
-
-
-
-
-
 
 
         body {
@@ -87,37 +29,101 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 1rem;
 
         }
 
-        .assets-list {
-            display: flex;
-            grid-gap: 1rem;
-            max-width: 768px;
-            width: 100%;
+        h1 { 
+            text-align:center;
+        }
+
+
+        .container {
+            text-align:center;
+
+        }
+
+
+<!-- for slide bar -->
+
+           
+        div.content {
+    width: 1000;
+        }
+
+
+
+        .container {
+            max-width: 1000px;
+            width: 95%;
+            text-align:center;
+        }
+
+        .slider-wrapper .assets-list {
+            display: grid;
+            gap: 18px;
+            font-size: 0;
+            margin-bottom: 30px;
             overflow-x: auto;
+            scrollbar-width: none;
+            grid-template-columns: repeat(5, 1fr);
         }
 
-       .assets {
-        min-width: calc(50 - .5rem);
-        height: 100px;
-        background: #222;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-size: 2rem;
+        .slider-wrapper .assets-list::-webkit-scrollbar {
+            display: none;
 
-       }
+        }
 
+        .slider-wrapper .assets-list .assets-item{
+            width: 325px;
+            height: 400px;
+            object-fit: cover;
+        }
 
+        .container .slider-scrollbar {
+            height: 24px;
+            width: 100%;
+            background: #F4C155;
+            display: flex;
+            align-items: center;
+        }
 
+        .slider-scrollbar .scrollbar-track {
+            height: 2px;
+            width: 100%;
+            background: #D9D8C3;
+            position: relative;
+            border-radius: 4px;
+        }
 
+        .slider-scrollbar:hover .scrollbar-track{
+            height: 4px;
+        }
 
+        .slider-scrollbar .scrollbar-thumb {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            background: #54608A;
+            border-radius: inherit;
+            cursor: grab;
+        }
 
+        .slider-scrollbar .scrollbar-track:active {
+            cursor: grabbing;
+            height: 8px;
+            top: -2;
+        }
 
-       
+        .slider-scrollbar .scrollbar-thumb::after { 
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -10px;
+            bottom: -10px;
+        }
+
+        <!-- end of for slide bar -->
 
 
 
@@ -303,4 +309,3 @@
         
         input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
             width: 100%;
-        }
